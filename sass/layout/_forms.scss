@@ -1,0 +1,51 @@
+/* Contact Form */
+
+#contact-form {
+    padding: 2rem;
+    & address {
+        font-style: normal;
+    }
+    & .heading {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+    & p {
+        color: $color-black;
+    }
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1.6rem;
+}
+
+/* ================================= 
+  Contact Form Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+    #contact-form {
+        background: rgba(255, 255, 255, 0.7);
+        z-index: 2;
+        padding: 2rem;
+        width: 30%;
+        position: absolute;
+        right: 8rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+    #contact .heading {
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+}
+

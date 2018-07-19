@@ -1,0 +1,52 @@
+/* UTILITIES */
+
+/* margin classes */
+.margin-bottom-big {
+    margin-bottom: 4rem !important;
+}
+
+.margin-bottom-small {
+    margin-bottom: 2rem !important;
+}
+
+.m-0-auto{
+    margin: 0 auto;
+}
+
+/* padding classes */
+
+.padding-top-small {
+    padding-top: 1rem;
+}
+    
+.padding-bottom-small {
+    padding-bottom: 1rem !important;
+}
+
+/* width classes */
+.width-50 {
+    width: 50%;
+}
+
+/* Text Align Classes */
+
+.text-left {
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+/* Responsive image class */
+
+.responsive-image {
+    max-width: 100%;
+}

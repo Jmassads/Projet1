@@ -1,0 +1,162 @@
+/* SLIDER */
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    margin-bottom: -4px;
+    &__text {
+        color: #f2f2f2;
+        font-size: 15px;
+        position: absolute;
+        padding-left: 6rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 50%;
+        text-align: left;
+        & h1 {
+            opacity: 0;
+
+        }
+        & p {
+            opacity: 0;
+
+        }
+        & span {
+            opacity: 0;
+
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .slideshow-container__text {
+        & h1 {
+            font-size: 3rem;
+            opacity: 1;
+            -webkit-transition: opacity 2s ease;
+            -o-transition: opacity 2s ease;
+            transition: opacity 2s ease;
+            -webkit-animation-name: moveInLeft;
+                    animation-name: moveInLeft;
+            -webkit-animation-duration: 2s;
+                    animation-duration: 2s;
+            /* or: Xms */
+            -webkit-animation-iteration-count: 1;
+                    animation-iteration-count: 1;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate;
+            /* or: normal */
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+            /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
+            /* or: backwards, both, none */
+            -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+            /* or: Xms */
+        }
+        & p {
+            font-size: 1.6rem;
+            opacity: 1;
+            -webkit-transition: opacity 2s ease;
+            -o-transition: opacity 2s ease;
+            transition: opacity 2s ease;
+            -webkit-animation-name: moveInRight;
+                    animation-name: moveInRight;
+            -webkit-animation-duration: 2s;
+                    animation-duration: 2s;
+            /* or: Xms */
+            -webkit-animation-iteration-count: 1;
+                    animation-iteration-count: 1;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate;
+            /* or: normal */
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+            /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
+            /* or: backwards, both, none */
+            -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+            /* or: Xms */
+        }
+
+        & span {
+            color: $color-blue-light;
+            opacity: 1;
+            -webkit-transition: opacity .2s ease;
+            -o-transition: opacity .2s ease;
+            transition: opacity .2s ease;
+        }
+
+    }
+
+}
+
+
+
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: auto;
+    padding: 1.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    & .fa {
+        font-size: 2.4rem;
+    }
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    right: -15px;
+    border-radius: 40px 0 0 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    & .fa {
+        margin-right: 7px;
+    }
+
+}
+
+.prev {
+    left: -15px;
+    border-radius: 0 40px 40px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    & .fa {
+        margin-left: 7px;
+    }
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,18 @@
+/* ================================= 
+  Footer Media Queries
+==================================== */
+
+.main-footer {
+    text-align: center;
+    background-color: $color-grey-light-1;
+    padding: 2em 0;
+    & span {
+        font-size: $default-font-size;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-footer {
+        background-color: $color-white;
+    }
+}

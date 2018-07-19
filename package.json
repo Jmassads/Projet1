@@ -1,0 +1,28 @@
+{
+  "name": "webagency",
+  "version": "1.0.0",
+  "description": "Intégrez la maquette du site d'une agence web",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Julia Assad",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "masonry-layout": "^4.2.1",
+    "masonry-plus": "^1.1.0"
+  }
+}

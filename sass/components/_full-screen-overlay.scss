@@ -1,0 +1,73 @@
+/* The overlay for when hamburger menu is clicked */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3 !important;
+    left: 0;
+    top: 0;
+    background-color: $color-grey-light-1;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    text-align: left;
+    padding: 3rem;
+}
+
+.overlay-link {
+    cursor: pointer;
+}
+.overlay li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid $color-grey-light-2;
+    & a{
+        -webkit-box-flex: 3;
+            -ms-flex: 3;
+                flex: 3;
+    }
+    & .fa {
+        font-size: 3rem;
+        color: $color-grey-dark;
+    }
+}
+.overlay li a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: $color-grey-dark;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.open-nav {
+    width: 100%;
+}
+
+/* ================================= 
+  Overlay Media Queries
+==================================== */
+
+@media screen and (min-width: 769px) {
+    .overlay {
+        opacity: 0;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+    }
+}

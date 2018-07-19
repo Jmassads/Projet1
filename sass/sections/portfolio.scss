@@ -1,0 +1,147 @@
+/* PORTFOLIO */
+
+section.portfolio {
+    background: #F5F5F5;
+}
+
+.portfolio__toolbar {
+    text-align: center;
+    margin: 0 auto 6rem;
+}
+
+/* au cas ou javascript est désactivé (masonry grid) */
+
+.grid {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    &-item {
+        width: calc(100%/2);
+        padding: 1rem;
+    }
+}
+
+
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    &__image {
+        opacity: 1;
+        -webkit-transition: .5s ease;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: block;
+    }
+    &__middle-container {
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        position: absolute;
+        text-align: left;
+        transform: rotateX(-90deg);
+        background-color: rgba(0, 0, 0, 0.5);
+        transform-origin: bottom;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+.imageholder {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.grid-item:hover .grid-item__image {
+    opacity: 0.2;
+    
+}
+
+.grid-item:hover .grid-item__middle-container {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+    transform: rotateX(0);
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    
+}
+
+.grid-item__text {
+    position: relative;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    
+    & .portfolio-heading{
+        font-size: 1.5rem;
+    }
+    
+    & p {
+        font-size: 1.2rem;
+    }
+    
+    & a {
+        color: #fff;;
+        text-transform: capitalize;
+        
+    }
+    & .fa-eye {
+        position: absolute;
+        top: -1.8rem;;
+        right: 1rem;
+        padding: 1rem;
+        border: 1px solid white;
+        background-color: #5CADD3;
+        border-radius: 50%;
+        }
+}
+
+
+/* ================================= 
+  Portfolio Media Queries
+==================================== */
+
+@media (min-width: 576px) {
+    .grid-item {
+        width: calc(100%/3);
+    }
+    
+    .grid-item__text .portfolio-heading{
+        font-size: 1.8rem;
+    }
+    
+    .grid-item__text p {
+        font-size: 1.6rem;
+    }
+    
+}
+    
+    
+    
+
+
+@media (min-width: 768px) {
+    .grid-item {
+        width: calc(100%/4);
+    }
+    
+    .grid-item__middle-container {
+        height: 45%;
+    }
+    
+}

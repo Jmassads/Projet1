@@ -1,0 +1,21 @@
+/* h2 headings bottom border */
+
+.heading__border {
+    color: gray;
+    text-align: center;
+    margin-top: -1rem;
+    &__outer__line {
+        width: 6%;
+        border-bottom: 1px solid $color-grey-light-2;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    & .fa-circle {
+        vertical-align: middle;
+        color: $color-blue-light;
+        font-size: 12px;
+    }
+}
+
+
+
