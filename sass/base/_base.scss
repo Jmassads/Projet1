@@ -46,21 +46,6 @@ section {
 .container {
     padding-right: 1rem;
     padding-left: 1rem;
+    max-width: 1150px;
+    margin: 0 auto;
 }
-
-@media (min-width: 768px) {
-    .container {
-        width: 95%;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 1025px) {
-    .container {
-        width: 90%;
-        max-width: 1150px;
-    }
-}
-
-
-
